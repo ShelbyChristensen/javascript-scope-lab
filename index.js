@@ -1,30 +1,23 @@
 // Write your solution in this file!
 
-// Global Scope
+// 🔹 Global scope variables
+const burgers = ['Hamburger', 'Cheeseburger'];
+let featuredDrink = 'Strawberry Milkshake';
 
-const burgers = ['Hamburger', 'Cheeseburger']; // globally-scoped with const
-let featuredDrink = 'Strawberry Milkshake';    // globally-scoped with let
-
-// Function-scoped: addBurger function
+// 🔹 Function-scoped variable and logic
 function addBurger() {
-    const newBurger = 'Flatburger';  // function-scoped
-    burgers.push(newBurger);         // adds to global burgers array
+  const newBurger = 'Flatburger'; // function-scoped
+  burgers.push(newBurger);        // modifies global burgers array
 }
 
-// Block-scoped: if statement
+// 🔹 Block-scoped variable inside always-true if statement
 if (true) {
-    const anotherNewBurger = 'Maple Bacon Burger'; // block-scoped
-    burgers.push(anotherNewBurger);                // adds to global burgers array
+  const anotherNewBurger = 'Maple Bacon Burger'; // block-scoped
+  burgers.push(anotherNewBurger);                // modifies global burgers array
 }
 
-// Function to change the featured drink
+// 🔹 Function that updates a global variable
 function changeFeaturedDrink() {
-    featuredDrink = 'The JavaShake'; // reassign global let variable
+  featuredDrink = 'The JavaShake'; // updates global let variable
 }
 
-console.log("Before:", burgers, featuredDrink);
-
-addBurger();
-changeFeaturedDrink();
-
-console.log("After:", burgers, featuredDrink);
